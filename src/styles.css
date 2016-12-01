@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+md-sidenav md-list-item{
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    will-change: color;
+    transition: color 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 48px;
+    height: auto;
+    }   
