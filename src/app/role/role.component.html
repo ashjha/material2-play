@@ -1,0 +1,20 @@
+<md-card>
+   <md-card-title>Permission Module</md-card-title>
+   <md-card-content>
+      <md-grid-list cols="3" rowHeight="200px">
+         <md-grid-tile *ngFor="let module of modules;let i = index" style="background:#78909C">
+            <md-grid-tile-header>
+               <md-checkbox #module_check (change)="0" >
+                  <h3>{{module.name}} </h3>
+               </md-checkbox>
+            </md-grid-tile-header>
+            <ul *ngIf="module_check.checked">
+               <li><md-checkbox [checked]="true">View</md-checkbox></li>
+               <li><md-checkbox [checked]="true">Add</md-checkbox></li>
+               <li><md-checkbox [checked]="true">Edit</md-checkbox></li>
+               <li><md-checkbox [checked]="true">Delete</md-checkbox></li>                
+            </ul>
+         </md-grid-tile>
+      </md-grid-list>
+   </md-card-content>
+</md-card>

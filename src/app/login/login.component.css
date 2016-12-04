@@ -1,0 +1,15 @@
+.login-card{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top:10%;
+    padding:2%;
+}
+.full-width{
+    width:100%
+}
+md-card-content{
+    padding: 2%;
+}
+body{
+    background: #6A1B9A;
+}

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import {routing} from './app-routing.module';
+
 import {OVERLAY_PROVIDERS} from "@angular2-material/core";
 
 // Material 2 
@@ -21,21 +23,31 @@ import { MdInputModule } from '@angular2-material/input';
 import { MdProgressCircleModule } from '@angular2-material/progress-circle';
 import { MdSidenavModule } from '@angular2-material/sidenav';
 import { MdListModule } from '@angular2-material/list';
+import { MdGridListModule } from '@angular2-material/grid-list';
 
 
 import 'hammerjs' ;
 
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { ChildComponent } from './child/child.component';
+import { RoleComponent } from './role/role.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent    
+    AppComponent,
+    LoginComponent,
+    HomeComponent,
+    ChildComponent,
+    RoleComponent    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    routing,
     MdCoreModule.forRoot(),
     MdCardModule.forRoot(),
     MdButtonModule.forRoot(),
@@ -50,6 +62,7 @@ import { AppComponent } from './app.component';
     MdProgressCircleModule.forRoot(),
     MdSidenavModule.forRoot(),
     MdListModule.forRoot(),
+    MdGridListModule.forRoot()
     
   ],
   providers: [OVERLAY_PROVIDERS],
