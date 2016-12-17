@@ -40,6 +40,7 @@
     "angular2-notifications": "^0.4.47",
     "core-js": "^2.4.1",
     "hammerjs": "^2.0.8",
+    "mydatepicker": "github:kekeh/mydatepicker",
     "rxjs": "5.0.0-beta.12",
     "ts-helpers": "^1.1.1",
     "zone.js": "^0.6.23"

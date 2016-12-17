@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'app works!';
     side = 'start';
  options={
-    position:["top","right"],
+    position:["bottom","right"],
     timeOut:5000,
     pauseOnHover:true,
     animate:"scale"
