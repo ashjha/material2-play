@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CoreService} from '../shared/core.service'
 @Component({
   selector: 'app-role',
   templateUrl: './role.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoleComponent implements OnInit {
 modules;
-  constructor() { }
+  constructor(
+    private core : CoreService
+  ) { }
 
   ngOnInit() {
+    this.core.onShow("Hey !","Welcome to role management Welcome to role managementWelcome to role management Welcome to role management",1)
     this.modules=[
       {name:'Grade'},
       {name:'Department'},

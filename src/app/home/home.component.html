@@ -4,7 +4,8 @@
       <a *ngFor="let navItem of navItems"
          md-list-item
          (click)="start.close()"
-         [routerLink]="[navItem.route]">
+         [routerLink]="[navItem.route]"
+         routerLinkActive="md-list-item-focus">
         {{navItem.name}}
       </a>
       <hr>
@@ -27,6 +28,7 @@
     </md-toolbar>
 
     <div>
+     
       <router-outlet></router-outlet>
     </div>
   </div>

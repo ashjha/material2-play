@@ -74,9 +74,9 @@
   <!-- Buttons -->
   <md-card>
     <button md-button>FLAT</button>
-    <button md-raised-button md-tooltip="This is a tooltip!">RAISED</button>
-    <button md-raised-button color="primary">PRIMARY RAISED</button>
-    <button md-raised-button color="accent">ACCENT RAISED</button>
+    <button md-raised-button md-tooltip="This is a tooltip!" (click)="onAlert('Success','Done Succesfully',1)">RAISED</button>
+    <button md-raised-button color="primary" (click)="onAlert('Congratulations !','Done Succesfully',1)">PRIMARY RAISED</button>
+    <button md-raised-button color="accent" (click)="onAlert('Oh No !','Somthing Wrong',0)">ACCENT RAISED</button>
   </md-card>
 
   <!-- Checkboxes -->

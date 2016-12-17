@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CoreService} from '../shared/core.service'; 
 
 @Component({
   selector: 'app-child',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _core :CoreService
+  ) { }
 
   ngOnInit() {
+    
+  }
+
+  onAlert(title,message,type){
+    this._core.onShow(title,message,type);
   }
 
 }

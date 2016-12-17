@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
     side = 'start';
+ options={
+    position:["top","right"],
+    timeOut:5000,
+    pauseOnHover:true,
+    animate:"scale"
+  };
 }

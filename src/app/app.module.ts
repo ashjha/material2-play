@@ -5,25 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import {routing} from './app-routing.module';
 
+import {MaterialModule} from '@angular/material';
+
 import {OVERLAY_PROVIDERS} from "@angular2-material/core";
 
 // Material 2 
-
-import { MdCoreModule } from '@angular2-material/core'
-import { MdButtonModule } from '@angular2-material/button';
-import { MdCardModule } from '@angular2-material/card';
-import { MdRadioModule } from '@angular2-material/radio';
-import { MdCheckboxModule } from '@angular2-material/checkbox'
-import { MdTooltipModule } from '@angular2-material/tooltip';
-import { MdSliderModule } from '@angular2-material/slider';
-import { MdToolbarModule,MdToolbarRow } from '@angular2-material/toolbar';
-import { MdIconModule } from '@angular2-material/icon';
-import { MdSlideToggleModule } from '@angular2-material/slide-toggle';
-import { MdInputModule } from '@angular2-material/input';
-import { MdProgressCircleModule } from '@angular2-material/progress-circle';
-import { MdSidenavModule } from '@angular2-material/sidenav';
-import { MdListModule } from '@angular2-material/list';
-import { MdGridListModule } from '@angular2-material/grid-list';
+import {SimpleNotificationsModule} from 'angular2-notifications';
 
 
 import 'hammerjs' ;
@@ -33,7 +20,9 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ChildComponent } from './child/child.component';
 import { RoleComponent } from './role/role.component';
+import { Angular2NotificationComponent } from './angular2-notification/angular2-notification.component';
 
+import {CoreService} from './shared/core.service';
 
 @NgModule({
   declarations: [
@@ -41,31 +30,18 @@ import { RoleComponent } from './role/role.component';
     LoginComponent,
     HomeComponent,
     ChildComponent,
-    RoleComponent    
+    RoleComponent,
+    Angular2NotificationComponent    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
-    MdCoreModule.forRoot(),
-    MdCardModule.forRoot(),
-    MdButtonModule.forRoot(),
-    MdRadioModule.forRoot(),    
-    MdCheckboxModule.forRoot(),
-    MdTooltipModule.forRoot(),
-    MdSliderModule.forRoot(),
-    MdIconModule.forRoot(),
-    MdToolbarModule.forRoot(),
-    MdSlideToggleModule.forRoot(),
-    MdInputModule.forRoot(),
-    MdProgressCircleModule.forRoot(),
-    MdSidenavModule.forRoot(),
-    MdListModule.forRoot(),
-    MdGridListModule.forRoot()
-    
+    MaterialModule.forRoot(),
+    SimpleNotificationsModule,
   ],
-  providers: [OVERLAY_PROVIDERS],
+  providers: [CoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+
   navItems:Object;
 
   constructor() { }
@@ -14,7 +15,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.navItems=[
       {name:'Child',route:'/child'},
-      {name:'Role Add',route:'/role/add'}
+      {name:'Role Add',route:'/role/add'},
+      {name: 'Angular2-notification', route:'/Angular2-notification' },
+
     ]
   }
 }

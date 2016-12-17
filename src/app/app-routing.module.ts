@@ -22,12 +22,14 @@ import { HomeComponent } from './home/home.component';
 
 import { ChildComponent } from './child/child.component';
 import { RoleComponent } from './role/role.component';
-
+import { Angular2NotificationComponent } from './angular2-notification/angular2-notification.component';
 
 const homeRoutes : Routes = [
       { path: '', redirectTo:'',pathMatch:'full' },
       { path: 'child', component: ChildComponent },  
       { path: 'role/add', component: RoleComponent },
+      { path: 'Angular2-notification', component: Angular2NotificationComponent },
+
 ]
 
 const routes: Routes = [
